@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bar06mqygajx7"]
+
+[ext_resource type="Script" path="res://scenes/FallingFly.gd" id="1_dm8gg"]
+[ext_resource type="Texture2D" uid="uid://beya40vh1glmd" path="res://assets/kenney_platformerpack/PNG/Enemies/fly_move.png" id="2_kcx1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_703da"]
+size = Vector2(48, 36)
+
+[node name="FallingFly" type="RigidBody2D"]
+script = ExtResource("1_dm8gg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.500001, 1.5)
+scale = Vector2(0.460938, 0.445313)
+texture = ExtResource("2_kcx1t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_703da")
+
+[connection signal="body_entered" from="." to="." method="_on_FallArea_body_entered"]
