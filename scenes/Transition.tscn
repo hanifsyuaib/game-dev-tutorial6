@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://txh67mxrfk8k"]
+
+[ext_resource type="Script" path="res://scenes/Transition.gd" id="1_4neb1"]
+[ext_resource type="FontFile" uid="uid://cth60gqdxo73p" path="res://assets/Fonts/Raw/continuum bold.ttf" id="1_j7wqt"]
+[ext_resource type="Texture2D" uid="uid://ddpq2vk3qll5b" path="res://assets/kenney_platformerpack/PNG/Enemies/fly.png" id="2_gbpl4"]
+[ext_resource type="Texture2D" uid="uid://ya2w7mgcdoqh" path="res://assets/kenney_platformerpack/PNG/Enemies/frog.png" id="3_nr4rv"]
+[ext_resource type="Texture2D" uid="uid://caagct4qorsvf" path="res://assets/kenney_platformerpack/PNG/Players/Variable sizes/Pink/alienPink_jump.png" id="4_2hvsr"]
+[ext_resource type="Texture2D" uid="uid://b6he6qvcoqefl" path="res://assets/kenney_platformerpack/PNG/Enemies/frog_move.png" id="4_61r3i"]
+[ext_resource type="Texture2D" uid="uid://bfpt4n245ef1h" path="res://assets/kenney_platformerpack/PNG/Items/star.png" id="5_j1km7"]
+
+[node name="Transition" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.352941, 0.627451, 0.772549, 1)
+script = ExtResource("1_4neb1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(352, 321)
+texture = ExtResource("2_gbpl4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(674, 78)
+texture = ExtResource("2_gbpl4")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1044, 581)
+texture = ExtResource("3_nr4rv")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(849, 479)
+texture = ExtResource("4_61r3i")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(614, 579)
+texture = ExtResource("3_nr4rv")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(155, 493)
+scale = Vector2(1.78519, 1.60733)
+texture = ExtResource("4_2hvsr")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(702, 413)
+scale = Vector2(1.8125, 1.71094)
+texture = ExtResource("5_j1km7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 160.0
+offset_right = 1046.0
+offset_bottom = 475.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_j7wqt")
+theme_override_font_sizes/font_size = 101
+text = "Get Ready 
+For 
+Level 2"
+horizontal_alignment = 1

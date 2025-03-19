@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw8fygfg5v5vl"]
+
+[ext_resource type="FontFile" uid="uid://yi4yarh8b6at" path="res://assets/Fonts/Raw/PersonifiedUXRegular.ttf" id="1_3xxnl"]
+[ext_resource type="Script" path="res://scenes/ReturnToMainMenu.gd" id="2_yhwkk"]
+
+[node name="GameOver" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.965992, 0.223407, 0.349057, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 284.0
+offset_right = 897.0
+offset_bottom = 366.0
+theme_override_fonts/font = ExtResource("1_3xxnl")
+theme_override_font_sizes/font_size = 120
+text = "GAME OVER"
+
+[node name="LinkButton" type="LinkButton" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 561.0
+offset_right = 695.0
+offset_bottom = 601.0
+theme_override_colors/font_color = Color(0.174998, 0.0525042, 0.0340854, 1)
+theme_override_colors/font_hover_color = Color(0.220148, 0.192229, 0.211276, 1)
+theme_override_fonts/font = ExtResource("1_3xxnl")
+theme_override_font_sizes/font_size = 30
+text = "Return to Main Menu"
+script = ExtResource("2_yhwkk")
+scene_to_load = "MainMenu"
+
+[connection signal="pressed" from="LinkButton" to="LinkButton" method="_on_ReturnToMainMenu_pressed"]

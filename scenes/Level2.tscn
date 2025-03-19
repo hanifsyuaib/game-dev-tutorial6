@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://b7d6h7clbobo6"]
+[gd_scene load_steps=16 format=4 uid="uid://b7d6h7clbobo6"]
 
 [ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1_h4864"]
 [ext_resource type="Texture2D" uid="uid://cela4hnu06pql" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_stone.png" id="2_4dkbj"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bar06mqygajx7" path="res://scenes/FallingFly.tscn" id="8_uhbs5"]
 [ext_resource type="Texture2D" uid="uid://ya2w7mgcdoqh" path="res://assets/kenney_platformerpack/PNG/Enemies/frog.png" id="9_n3fml"]
 [ext_resource type="Texture2D" uid="uid://u1jtuxja80pp" path="res://assets/kenney_platformerpack/PNG/Enemies/barnacle.png" id="10_cv156"]
+[ext_resource type="PackedScene" uid="uid://bdpqk1kck816c" path="res://scenes/LifeCounter.tscn" id="11_22dgs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rpboj"]
 texture = ExtResource("2_4dkbj")
@@ -150,9 +151,9 @@ tile_map_data = PackedByteArray("AAD5////AgAGAAEAAAD4////AgAHAAEAAAD6////AgAGAAA
 tile_set = SubResource("TileSet_4y15v")
 
 [node name="AreaTrigger" parent="." instance=ExtResource("5_481qb")]
-position = Vector2(575, 1083)
+position = Vector2(509, 1434)
 rotation = -1.5708
-scale = Vector2(12, 12)
+scale = Vector2(20, 20)
 sceneName = "Level2"
 
 [node name="FinishLine" type="Sprite2D" parent="."]
@@ -178,7 +179,7 @@ texture = ExtResource("9_n3fml")
 [node name="AreaTrigger" parent="FrogEnemies" instance=ExtResource("5_481qb")]
 position = Vector2(-1.89631, 51.1999)
 scale = Vector2(1.2, 1.2)
-sceneName = "LoseScreen"
+sceneName = "Level2"
 
 [node name="BarnacleEnemies" type="Sprite2D" parent="."]
 position = Vector2(606, 562)
@@ -187,4 +188,8 @@ texture = ExtResource("10_cv156")
 
 [node name="AreaTrigger" parent="BarnacleEnemies" instance=ExtResource("5_481qb")]
 position = Vector2(-2.17876, 11.1303)
-sceneName = "LoseScreen"
+sceneName = "Level2"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("11_22dgs")]

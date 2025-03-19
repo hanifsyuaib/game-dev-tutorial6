@@ -1,3 +1,27 @@
+# Tutorial 6 - Menu and In-Game Graphical User Interface (GUI)
+
+## Penjelasan Proses Pengerjaan Tutorial 6
+
+### 1. Tombol pada layar game over untuk kembali ke menu utama
+Pada layar game over terdapat tombol bertulisan `Return to Main Menu` yang jika ditekan akan membawa player kembali ke main menu.
+
+### 2. Fitur Select Stage
+Pada fitur select stage, terdapat 2 pilihan yang player dapat pilih, yaitu level 1 dan level 2. Masing-masing pilihan level dilengkapi juga dengan gambar finish line setiap level untuk membuat tampilan lebih menarik. Kemudian, terdapat tombol bertulisan `Return to Main Menu` yang jika ditekan akan kembali ke main menu.
+
+### 3. Layar Transisi dari level 1 ke level 2
+Pada layar transisi, akan muncul ketika player menyelasaikan level 1. Selama 3 detik layar transisi akan ditampilkan dengan dimunculkan berbagai gambar seperti enemies yang player akan lewati. Setelah itu, layar transisi akan berpindah ke layar level 2 untuk player bisa mainkan.
+
+### 4. Layar Memenangkan game
+Ketika player berhasil sampai di finish line level 2, maka akan ditampilkan layar ucapan selamat atas memenangkan game dan player bisa menekan tombol bertulisan `Return to Main Menu` yang jika ditekan akan kembali ke main menu.
+
+<br>
+
+---
+
+<br>
+
+<br>
+
 # Tutorial 4 - Basic 2D Level Design
 
 ## Penjelasan Proses Pengerjaan Level Baru

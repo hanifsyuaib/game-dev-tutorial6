@@ -8,6 +8,7 @@ size = Vector2(78, 108)
 
 [node name="FallingFish" type="RigidBody2D"]
 script = ExtResource("1_jupcg")
+sceneName = "Level1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 3)

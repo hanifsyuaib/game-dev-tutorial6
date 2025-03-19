@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://yqmk0vpvnyxr"]
+[gd_scene load_steps=10 format=4 uid="uid://yqmk0vpvnyxr"]
 
 [ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://cluh2ekc38ktx" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_dirt.png" id="2_6ft2b"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://t8tdoutbmau1" path="res://scenes/AreaTrigger.tscn" id="4_si1ah"]
 [ext_resource type="Script" path="res://scenes/Spawner.gd" id="5_q6uah"]
 [ext_resource type="PackedScene" uid="uid://dp37jrv45e8gq" path="res://scenes/FallingFish.tscn" id="6_7dqbp"]
+[ext_resource type="PackedScene" uid="uid://bdpqk1kck816c" path="res://scenes/LifeCounter.tscn" id="7_5qa0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l5mje"]
 texture = ExtResource("2_6ft2b")
@@ -73,13 +74,17 @@ texture = ExtResource("3_kuh7u")
 [node name="AreaTrigger" parent="Sprite2D" instance=ExtResource("4_si1ah")]
 position = Vector2(50.0596, 3.50388)
 scale = Vector2(5, 5)
-sceneName = "Level2"
+sceneName = "Transition"
 
 [node name="AreaTrigger" parent="." instance=ExtResource("4_si1ah")]
-position = Vector2(585, 1617)
-scale = Vector2(18, 18)
+position = Vector2(321, 2227)
+scale = Vector2(25, 25)
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(600, -645)
 script = ExtResource("5_q6uah")
 obstacle = ExtResource("6_7dqbp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("7_5qa0u")]
